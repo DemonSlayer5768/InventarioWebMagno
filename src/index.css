@@ -5,25 +5,58 @@ html {
 }
 
 :root {
-  --background: linear-gradient(
-    90deg,
-    rgba(2, 16, 36, 1) 19%,
-    rgba(5, 38, 89, 1) 50%
-  );
+  /* Backgrounds */
+  --bg-main: #0f172a;
+  --bg-surface: #1e293b;
+  --sidebar: #111827;
+
+  /* Borders */
+  --border: #334155;
+
+  /* Text */
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
+
+  /* Actions */
+  --primary: #3b82f6;
+  --primary-hover: #2563eb;
+
+  /* Status */
+  --success: #22c55e;
+  --warning: #f59e0b;
+  --danger: #ef4444;
 }
 
+/* Dark mode base */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: linear-gradient(
-      90deg,
-      rgba(2, 16, 36, 1) 19%,
-      rgba(5, 38, 89, 1) 50%
-    );
+    --background: var(--bg-main);
+    --foreground: var(--text-primary);
   }
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
+  background-color: var(--bg-main);
+  color: var(--text-primary);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Estilos útiles para dashboard */
+
+.card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+.sidebar {
+  background: var(--sidebar);
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+.border-default {
+  border-color: var(--border);
 }
