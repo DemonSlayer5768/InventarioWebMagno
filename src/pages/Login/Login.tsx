@@ -1,6 +1,6 @@
 // Login.tsx
-import LoginForm from "@/components/Layout/LoginForm";
-import LightPillar from "@/components/ui/ligthPilar";
+import LoginForm from "@/components/layout/LoginForm";
+import LightPillar from "@/components/ui/LigthPilar";
 
 export default function Login() {
   return (

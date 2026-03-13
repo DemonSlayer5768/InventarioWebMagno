@@ -25,15 +25,10 @@ export default function LoginForm() {
       return;
     }
 
-    // try {
-    //   await login(email, password);
-    // } catch (error: unknown) {
-    //   if (error instanceof Error) {
-    //     setError(error.message || "Error al iniciar sesión");
-    //   } else {
-    //     setError("Error al iniciar sesión");
-    //   }
-    // }
+    // Simulación de login exitoso
+    localStorage.setItem("auth", "true");
+    window.location.href = "/dashboard";
+    // Cuando implementes la API, reemplaza esta lógica.
   };
 
   return (
