@@ -24,6 +24,8 @@ import {
   SidebarFooter,
 } from "@/components/ui/sidebar";
 
+import { useLocation } from "react-router-dom";
+
 const menuItems = [
   { title: "Inicio", icon: Home, href: "/dashboard" },
   { title: "Productos", icon: Package, href: "/productos" },
@@ -33,6 +35,9 @@ const menuItems = [
 ];
 
 export function AppSidebar() {
+  const location = useLocation();
+  const pathname = location.pathname;
+
   function handleLogout() {
     localStorage.removeItem("auth");
     window.location.href = "/";
@@ -61,6 +66,7 @@ export function AppSidebar() {
                   <SidebarMenuButton
                     asChild
                     size="lg"
+                    isActive={pathname === item.href}
                     tooltip={item.title}
                     className="mb-1 rounded-lg px-3 py-2 text-[15px] font-medium text-[#F1F5F9] hover:bg-[#1E293B] hover:text-white transition-colors"
                   >

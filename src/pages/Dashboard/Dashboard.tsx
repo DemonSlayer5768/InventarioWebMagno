@@ -1,16 +1,14 @@
 import { SidebarProvider } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/layout/appSideBar";
+import Dashboard from "@/components/layout/DashboardForm";
 
-export default function Dashboard() {
+export default function DashboardPage() {
   return (
-    <SidebarProvider>
-      <div className="flex min-h-screen">
+    <div className="w-full">
+      <SidebarProvider>
         <AppSidebar />
-
-        <div className="flex-1 p-6">
-          <h1 className="text-2xl font-bold">Dashboard</h1>
-        </div>
-      </div>
-    </SidebarProvider>
+        <Dashboard />
+      </SidebarProvider>
+    </div>
   );
 }
